@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cream Light Theme */
+    --background: 35 70% 90%; /* Cream */
+    --foreground: 30 20% 25%; /* Dark Brown/Gray for text */
+    
+    --card: 35 65% 85%; /* Slightly darker/less saturated cream for cards */
+    --card-foreground: 30 20% 25%;
+    
+    --popover: 35 60% 82%; /* Slightly darker/less saturated cream for popovers */
+    --popover-foreground: 30 20% 25%;
+    
+    --primary: 25 85% 55%; /* Warm Orange accent */
+    --primary-foreground: 20 100% 98%; /* Very light, almost white for contrast on orange */
+    
+    --secondary: 35 50% 80%; /* Muted Cream/Light Warm Gray */
+    --secondary-foreground: 30 20% 25%;
+    
+    --muted: 35 40% 75%; /* Light Grayish Cream */
+    --muted-foreground: 30 30% 45%; /* Slightly lighter than main foreground */
+    
+    --accent: 25 90% 60%; /* Brighter Warm Orange for interactive elements */
+    --accent-foreground: 20 100% 98%;
+    
+    --destructive: 0 70% 50%; /* Standard red for destructive actions */
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 35 50% 70%; /* Light brownish border */
+    --input: 35 50% 80%; /* Slightly lighter than border for input background */
+    --ring: 25 85% 60%; /* Warm Orange for rings */
+    
+    --radius: 0.75rem; /* Slightly more rounded */
+
+    /* Custom Sidebar Colors (Cream theme) */
+    --sidebar: 35 60% 83%; /* Slightly darker/more saturated cream for sidebar */
+    --sidebar-foreground: 30 20% 25%; /* Dark Brown/Gray text */
+    --sidebar-accent: 25 85% 55%; /* Warm Orange for active/hover in sidebar */
+    --sidebar-accent-foreground: 20 100% 98%;
+    --sidebar-border: 35 50% 70%;
+    --sidebar-ring: 25 85% 60%;
+
+    /* Font variable placeholder, to be filled by next/font */
+    --font-sans: "Alegreya", sans-serif;
+  }
+
+  .dark {
+    /* For now, the dark theme will be the same as the light cream theme. 
+       Can be customized later if a separate dark mode is needed. */
+    --background: 35 70% 90%; 
+    --foreground: 30 20% 25%; 
+    --card: 35 65% 85%; 
+    --card-foreground: 30 20% 25%;
+    --popover: 35 60% 82%; 
+    --popover-foreground: 30 20% 25%;
+    --primary: 25 85% 55%; 
+    --primary-foreground: 20 100% 98%;
+    --secondary: 35 50% 80%; 
+    --secondary-foreground: 30 20% 25%;
+    --muted: 35 40% 75%; 
+    --muted-foreground: 30 30% 45%;
+    --accent: 25 90% 60%; 
+    --accent-foreground: 20 100% 98%;
+    --destructive: 0 70% 50%; 
+    --destructive-foreground: 0 0% 100%;
+    --border: 35 50% 70%; 
+    --input: 35 50% 80%; 
+    --ring: 25 85% 60%; 
+
+    --sidebar: 35 60% 83%; 
+    --sidebar-foreground: 30 20% 25%; 
+    --sidebar-accent: 25 85% 55%; 
+    --sidebar-accent-foreground: 20 100% 98%;
+    --sidebar-border: 35 50% 70%;
+    --sidebar-ring: 25 85% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans); /* Apply the Alegreya font by default */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    font-family: var(--font-sans); /* Use the CSS variable set by next/font */
+  }
+  .font-headline {
+    font-family: var(--font-sans);
+  }
+  .font-body {
+    font-family: var(--font-sans);
+  }
+}
